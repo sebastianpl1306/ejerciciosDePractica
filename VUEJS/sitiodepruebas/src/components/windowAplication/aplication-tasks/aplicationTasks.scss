@@ -1,0 +1,16 @@
+.nav-shadow{
+    -webkit-box-shadow: 11px 1px 14px -8px rgba(0,0,0,0.62); 
+    box-shadow: 11px 1px 14px -8px rgba(0,0,0,0.62);
+    z-index: 2;
+}
+.float-menu{
+    left: 160px;
+    -webkit-box-shadow: 11px 1px 14px -8px rgba(0,0,0,0.38); 
+    box-shadow: 11px 1px 14px -8px rgba(0,0,0,0.38);
+    z-index: 1;
+}
+
+.button-hover:hover{
+    background-color: #0d6efd;
+    color: #fff;
+}

@@ -102,3 +102,40 @@ dist
 
 # TernJS port file
 .tern-port
+
+.DS_Store
+node_modules
+/dist
+
+# local env files
+.env.local
+.env.*.local
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+
+NODE/aprendiendo_node/.DS_Store
+NODE/aprendiendo_node/node_modules
+NODE/aprendiendo_node//dist
+
+
+NODE/EXPRESS/Aprendiendo_Express/.DS_Store
+NODE/EXPRESS/Aprendiendo_Express/node_modules
+NODE/EXPRESS/Aprendiendo_Express//dist
+
+VUEJS/sitiodepruebas/.DS_Store
+VUEJS/sitiodepruebas/node_modules
+VUEJS/sitiodepruebas//dist
+

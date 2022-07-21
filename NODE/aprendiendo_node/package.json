@@ -1,0 +1,32 @@
+{
+  "name": "aprendiendo_node",
+  "version": "1.0.0",
+  "description": "Paquete para aprender nodejs",
+  "main": "facturas.js",
+  "scripts": {
+    "start": "node dist/index.js",
+    "compile": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nodejs",
+    "sebastian",
+    "pabon",
+    "sebastian",
+    "pabon",
+    "lopez",
+    "programador"
+  ],
+  "author": "sebastian pabon lopez",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "is-number": "^7.0.0",
+    "nodemon": "^2.0.14",
+    "typescript": "^4.4.4"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/is-number": "^7.0.1"
+  }
+}

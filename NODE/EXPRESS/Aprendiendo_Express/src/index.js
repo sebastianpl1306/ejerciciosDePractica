@@ -4,11 +4,11 @@ const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 
 //routes
-const routes = require('./routes/routes')
-const pool = require('./BD/poolBD')
+const routes = require('./routes/routes');
+const pool = require('./BD/poolBD');
 
 //middleware
-const registroLLamadas = require('./middleware/registroLLamadas')
+const registroLLamadas = require('./middleware/registroLLamadas');
 
 //definiendo express
 const aplication = express();

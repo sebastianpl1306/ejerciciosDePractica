@@ -6,12 +6,17 @@ const {databasePool} = require('./keys');
 //inicializaciones
 const router = express.Router();
 
+//Estableciendo la conexión de mysql
+const connection = mysql.createConnection(databasePool);
+
+connection.connect();
+
 //creación del pool
 var pool = mysql.createPool({databasePool});
 
 router.get('/', function (req, res) {
     pool.getConnection(function (err, connection) {
-        console.log(connection);
+        console.log("estableciendo connection: "+connection);
     })
 })
 

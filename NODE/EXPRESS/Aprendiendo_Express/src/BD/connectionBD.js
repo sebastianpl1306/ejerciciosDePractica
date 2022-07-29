@@ -13,7 +13,7 @@ connection.connect()
 
 router.get('/', function (req, res) {
     connection.query('SELECT * FROM aplicaciones', function (error, results, campos) {
-        console.log(results[0].nombre)
+        console.log(results[0].titulo)
     })
 })
 

@@ -130,12 +130,18 @@ NODE/aprendiendo_node/.DS_Store
 NODE/aprendiendo_node/node_modules
 NODE/aprendiendo_node//dist
 
-
 NODE/EXPRESS/Aprendiendo_Express/.DS_Store
 NODE/EXPRESS/Aprendiendo_Express/node_modules
 NODE/EXPRESS/Aprendiendo_Express//dist
+
+NODE\EXPRESS\aplicacion_tareas/.DS_Store
+NODE\EXPRESS\aplicacion_tareas/node_modules
+NODE\EXPRESS\aplicacion_tareas//dist
 
 VUEJS/sitiodepruebas/.DS_Store
 VUEJS/sitiodepruebas/node_modules
 VUEJS/sitiodepruebas//dist
 
+VUEJS/proyecto_vuets/.DS_Store
+VUEJS/proyecto_vuets/node_modules
+VUEJS/proyecto_vuets//dist

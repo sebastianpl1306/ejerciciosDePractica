@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Ejemplo</title>
+</head>
+<body>
+  <h1>Tareas</h1>
+
+  <form action="/agregar-tarea" method="POST">
+    <p>
+    <label for="descripcion">Nueva Tarea: </label>
+    <input type="text" name="descripcion">
+    <button type="submit">Agregar</button>
+    </p>
+  </form>
+
+  <hr>
+
+  <ul>
+    <% for(let i=0; i<tareas.length; i++) { %>
+    <li><%=tareas[i].descripcion%></li>
+    <% } %>
+  </ul>
+
+</body>
+</html>

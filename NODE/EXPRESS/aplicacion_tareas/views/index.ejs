@@ -21,7 +21,18 @@
 
   <ul>
     <% for(let i=0; i<tareas.length; i++) { %>
-    <li><%=tareas[i].descripcion%></li>
+    <li>
+      <a href="/actualizar-formulario?id=<%=tareas[i].id%>"><%=tareas[i].descripcion%></a>
+      [<a href="/eliminar-tarea?id=<%=tareas[i].id%>" onclick="return confirm('¿Esta seguro de eliminar esta tarea?')">X</a>]
+      
+      <br/>
+      Recursos
+      <ol>
+        <% for(let j=0; j < tareas[i].recursos.length; j++) { %>
+          <li><%=tareas[i].recursos[j]%></li>
+        <% } %>
+      </ol>
+    </li>
     <% } %>
   </ul>
 

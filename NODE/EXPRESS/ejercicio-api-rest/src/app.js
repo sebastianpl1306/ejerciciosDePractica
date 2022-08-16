@@ -25,6 +25,7 @@ app.get('/', (peticion, respuesta) => {
         connection.query(query, (error, filas, campos) =>{
             respuesta.json({data: filas});
         })
+        connection.release();
     })
 })
 
@@ -40,6 +41,7 @@ app.get('/:id', (peticion, respuesta) => {
                 respuesta.json({errors: ["No se encontro el producto"]})
             }
         })
+        connection.release();
     })
 })
 

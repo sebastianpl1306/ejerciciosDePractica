@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>New Sails App</title>
-
+    <title>Mi tienda</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- Viewport mobile tag for sensible mobile support -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -32,14 +32,14 @@
     -->
 
     <!--STYLES-->
+    <link rel="stylesheet" href="/styles/importer.css">
     <!--STYLES END-->
   </head>
 
   <body>
+    <%- partial('../partials/header.ejs');%>
     <%- body %>
-
-
-
+    <%- partial('../partials/footer.ejs');%>
     <!--
         Client-side Templates
         ========================
@@ -105,6 +105,9 @@
     -->
 
     <!--SCRIPTS-->
+    <script src="/dependencies/sails.io.js"></script>
+    <script src="/js/pages/cerrajeros.page.js"></script>
+    <script src="/js/pages/terminos-y-condiciones.page.js"></script>
     <!--SCRIPTS END-->
   </body>
 </html>

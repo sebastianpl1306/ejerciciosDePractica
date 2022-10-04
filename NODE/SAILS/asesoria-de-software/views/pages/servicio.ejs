@@ -1,0 +1,28 @@
+<section class="container">
+  <article class="row">
+    <h3><%=sails.__("Servicio")%></h3>
+  </article>
+  <form action="procesar-formulario" class="row" method="POST">
+    <div class="mb-3">
+      <label for="nombre" class="form-label"><%=sails.__("Nombre")%></label>
+      <input type="text" class="form-control" id="nombre" placeholder="Antonio Rafael" name="nombre">
+    </div>
+    <div class="mb-3">
+      <label for="apellido" class="form-label"><%=sails.__("Apellido")%></label>
+      <input type="text" class="form-control" id="apellido" placeholder="Velazquez Muñoz" name="apellido">
+    </div>
+    <div class="mb-3">
+      <label for="servicio" class="form-label"><%=sails.__("Servicio a Solicitar")%></label>
+      <input type="text" class="form-control" id="servicio" name="servicio">
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label"><%=sails.__("Email")%></label>
+      <input type="email" class="form-control" id="email" placeholder="example@example.com" name="email">
+    </div>
+    <div class="mb-3">
+      <label for="telefono" class="form-label"><%=sails.__("Teléfono")%></label>
+      <input type="text" class="form-control" id="telefono" name="telefono">
+    </div>
+    <button type="submit" class="btn btn-primary"><%=sails.__("Enviar")%></button>
+  </form>
+</section>

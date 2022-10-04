@@ -1,0 +1,38 @@
+<section class="container mt-4">
+  <article>
+    <h1>INICIO CERRAJEROS</h1>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">nombre</th>
+          <th scope="col">telefono</th>
+          <th scope="col">zona</th>
+          <th scope="col">empresa</th>
+          <th scope="col">Comentarios</th>
+          <th scope="col">disponible</th>
+        </tr>
+      </thead>
+      <tbody>
+        <%cerrajeros.forEach( cerrajero =>{ %>
+          <tr>
+            <th><%=cerrajero.id%></th>
+            <td><%=cerrajero.nombre%></td>
+            <td><%=cerrajero.telefono%></td>
+            <td><%=cerrajero.zona%></td>
+            <td><%=cerrajero.empresa.nombre%></td>
+            <td>
+              <ul>
+              <%cerrajero.comentarios.forEach( comentario =>{ %>
+                <li><%=comentario.comentario%></li>
+                <li><%=comentario.usuario.comentario%></li>
+              <%});%>
+              </ul>
+            </td>
+            <td><%=!cerrajero.disponible ? "No" : "Si"%></td>
+          </tr>
+        <%});%>
+      </tbody>
+    </table>
+  </article>
+</section>

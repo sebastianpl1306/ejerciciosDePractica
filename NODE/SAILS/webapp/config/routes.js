@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 /**
  * Route Mappings
  * (sails.config.routes)
@@ -19,9 +20,13 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  '/': { view: 'pages/homepage' },
-
-
+  '/': { action: 'home' },
+  '/acerca-de': {view: 'pages/acerca_de'},
+  'GET /terminos-y-condiciones': { action: 'view-terminos-y-condiciones' },
+  'GET /cerrajeros': { action: 'view-cerrajeros' },
+  'GET /crear-cerrajeros': { action: 'crear-cerrajeros' },
+  'GET /eliminar-comentario/:comentarioId': { action: 'eliminar-comentario' },
+  'POST /actualizar-comentario/:comentarioId': { action: 'actualizar-comentario' },
   /***************************************************************************
   *                                                                          *
   * More custom routes here...                                               *

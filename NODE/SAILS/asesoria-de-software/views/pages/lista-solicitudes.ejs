@@ -1,0 +1,25 @@
+<section class="container">
+  <article class="row">
+    <h3>Lista Solicitudes</h3>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">nombre</th>
+          <th scope="col">servicio</th>
+          <th scope="col">email</th>
+          <th scope="col">telefono</th>
+        </tr>
+      </thead>
+      <tbody>
+        <%solicitudes.forEach(solicitud =>{%>
+          <tr>
+            <th><%=solicitud.nombre%></th>
+            <th><%=solicitud.servicio%></th>
+            <th><%=solicitud.email%></th>
+            <th><%=solicitud.telefono%></th>
+          </tr>
+        <%})%>
+      </tbody>
+    </table>
+  </article>
+</section>

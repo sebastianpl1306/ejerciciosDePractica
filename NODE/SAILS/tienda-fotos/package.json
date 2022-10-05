@@ -11,6 +11,7 @@
     "grunt": "1.0.4",
     "nodemon": "^2.0.20",
     "sails": "^1.5.3",
+    "sails-hook-flash": "^0.2.2",
     "sails-hook-grunt": "^5.0.0",
     "sails-hook-orm": "^4.0.0",
     "sails-hook-sockets": "^2.0.0",

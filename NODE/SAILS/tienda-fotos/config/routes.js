@@ -21,6 +21,8 @@ module.exports.routes = {
 
   '/': { view: 'pages/homepage' },
   'GET /acerca-de': { action: 'view-acerca-de' },
+  'GET /registro': 'SesionController.registro',
+  'POST /procesar-registro': 'SesionController.procesarRegistro',
 
   /***************************************************************************
   *                                                                          *

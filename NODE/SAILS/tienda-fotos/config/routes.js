@@ -19,11 +19,13 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  '/': { view: 'pages/homepage' },
-  'GET /acerca-de': { action: 'view-acerca-de' },
+  'GET /': 'PrincipalController.inicio',
+  'GET /acerca-de': {view: 'pages/acerca-de'},
   'GET /registro': 'SesionController.registro',
   'POST /procesar-registro': 'SesionController.procesarRegistro',
-
+  'GET /inicio-sesion': 'SesionController.inicioSesion',
+  'POST /procesar-inicio-sesion': 'SesionController.procesarInicioSesion',
+  'GET /cerrar-sesion': 'SesionController.cerrarSesion',
   /***************************************************************************
   *                                                                          *
   * More custom routes here...                                               *

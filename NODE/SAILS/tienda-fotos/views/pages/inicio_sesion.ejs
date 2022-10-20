@@ -1,0 +1,25 @@
+<section class="container my-3">
+    <article class="row border-bottom mb-3">
+        <h1 class="col-12">Iniciar sesión</h1>
+    </article>
+    <% flash.get('mensaje').forEach( function (msg){%>
+        <div class="alert alert-danger" role="alert">
+            <%=msg%>
+        </div>
+    <% }); %>
+    <article class="row">
+      <form class="row" method="post" action="/procesar-inicio-sesion">
+        <div class="mb-3">
+          <label for="correo" class="form-label">Correo: </label>
+          <input type="email" class="form-control" id="correo" name="correo">
+        </div>
+        <div class="mb-3">
+          <label for="clave" class="form-label">Contraseña: </label>
+          <input type="password" class="form-control" id="clave" name="clave">
+        </div>
+        <div class="text-center">
+         <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+        </div>
+      </form>
+    </article>
+</section>

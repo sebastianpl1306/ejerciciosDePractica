@@ -1,0 +1,49 @@
+<section class="container my-3">
+  <% flash.get('mensaje').forEach( function (msg){%>
+    <div class="alert alert-primary" role="alert">
+        <%=msg%>
+    </div>
+  <% }); %>
+  <article class="row border-bottom mb-3">
+    <h1 class="col-12">Carro De Compra</h1>
+  </article>
+  <article class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+    <h3 class="col-12">Encuentra las imagenes que mas te gusten</h3>
+    <div class="col-8">
+      <div class="row">
+        <%elementos.forEach( elemento =>{%>
+        <div class="col">
+          <div class="shadow mb-5 bg-body rounded">
+            <img src="/images/<%=elemento.foto.ruta%>" class="w-100" width="300" height="200" alt="...">
+            <div class="row mt-2 p-3">
+              <h4><%=elemento.foto.titulo%></h4>
+              <p><small><%=elemento.foto.descripcion%></small></p>
+              <h5 class="col-7">$<%=elemento.foto.precio%></h5>
+              <%if(session && session.cliente){%>
+              <div class="col-12 text-center">
+                <a href="/eliminar-carro-compra/<%=elemento.foto.id%>" class="btn btn-danger">Eliminar Del Carrito <i class="fa fa-trash fa-1x align-middle"></i></a>
+              </div>
+              <%}%>
+            </div>
+          </div>
+        </div>
+        <%})%>
+      </div>
+    </div>
+
+    <div class="col-4 border-start">
+      <div class="row">
+        <h3 class="col-12 text-center">Carrito de compras</h3>
+        <div class="col-12 mt-2">
+          <p><b>Usuario:</b> <%=session.cliente.nombre%></p>
+          <p><b>Email:</b> <%=session.cliente.email%></p>
+          <p><b>Productos:</b> <%=(session.carroCompra) ? session.carroCompra.length : 0%></p>
+          <p class="fs-4"><b>Total:</b> $<%=totalCompra%></p>
+          <div class="w-100 text-center">
+            <a href="/procesar-compra" class="btn btn-success">Comprar todo <i class="fa fa-cart-shopping fa-1x align-middle"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+</section>

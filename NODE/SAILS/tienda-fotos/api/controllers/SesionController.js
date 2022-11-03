@@ -55,8 +55,8 @@ module.exports = {
     //comprueba si se encontro un registro y redirije a la pagina de inicio
     if (cliente) {
       request.session.cliente = cliente;
-      //let carroCompra = await CarroCompra.find({cliente: cliente.id});
-      //request.session.carroCompra = carroCompra;
+      let carroCompra = await CarroCompra.find({cliente: cliente.id});
+      request.session.carroCompra = carroCompra;
       request.addFlash('mensaje','Sesión iniciada');
       return response.redirect('/');
     } else {

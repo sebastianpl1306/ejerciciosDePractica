@@ -1,32 +1,19 @@
 /**
- * Foto.js
+ * OrdenDetalle.js
  *
  * @description :: A model definition represents a database table/collection.
  * @docs        :: https://sailsjs.com/docs/concepts/models-and-orm/models
  */
 
 module.exports = {
-
+  tableName: 'orden_detalle',
   attributes: {
 
     //  ╔═╗╦═╗╦╔╦╗╦╔╦╗╦╦  ╦╔═╗╔═╗
     //  ╠═╝╠╦╝║║║║║ ║ ║╚╗╔╝║╣ ╚═╗
     //  ╩  ╩╚═╩╩ ╩╩ ╩ ╩ ╚╝ ╚═╝╚═╝
-    titulo: {
-      type: 'string'
-    },
-    descripcion: {
-      type: 'string'
-    },
-    ruta: {
-      type: 'string'
-    },
-    precio: {
-      type: 'string'
-    },
-    activa: {
-      type: 'boolean'
-    },
+
+
     //  ╔═╗╔╦╗╔╗ ╔═╗╔╦╗╔═╗
     //  ║╣ ║║║╠╩╗║╣  ║║╚═╗
     //  ╚═╝╩ ╩╚═╝╚═╝═╩╝╚═╝
@@ -35,6 +22,15 @@ module.exports = {
     //  ╔═╗╔═╗╔═╗╔═╗╔═╗╦╔═╗╔╦╗╦╔═╗╔╗╔╔═╗
     //  ╠═╣╚═╗╚═╗║ ║║  ║╠═╣ ║ ║║ ║║║║╚═╗
     //  ╩ ╩╚═╝╚═╝╚═╝╚═╝╩╩ ╩ ╩ ╩╚═╝╝╚╝╚═╝
+    foto: {
+      model: 'foto',
+      columnName: 'foto_id'
+    },
+
+    orden: {
+      model: 'orden',
+      columnName: 'orden_id'
+    }
   },
 
 };

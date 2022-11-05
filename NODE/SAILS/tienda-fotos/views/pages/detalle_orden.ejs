@@ -1,0 +1,43 @@
+<section class="container my-3">
+    <% flash.get('mensaje').forEach( function (msg){%>
+      <div class="alert alert-primary" role="alert">
+          <%=msg%>
+      </div>
+    <% }); %>
+    <article class="row border-bottom mb-3">
+      <h1 class="col-12">Carro De Compra</h1>
+    </article>
+    <article class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+      <h3 class="col-12">Encuentra las imagenes que mas te gusten</h3>
+      <div class="col-8">
+        <div class="row">
+          <%orden[0].detalle.forEach( elemento =>{%>
+          <div class="col">
+            <div class="shadow mb-5 bg-body rounded">
+              <img src="/images/<%=elemento.foto.ruta%>" class="w-100" width="300" height="200" alt="...">
+              <div class="row mt-2 p-3">
+                <h4><%=elemento.foto.titulo%></h4>
+                <p><small><%=elemento.foto.descripcion%></small></p>
+                <h5 class="col-7">$<%=elemento.foto.precio%></h5>
+                <%if(session && session.cliente){%>
+                <%}%>
+              </div>
+            </div>
+          </div>
+          <%})%>
+        </div>
+      </div>
+  
+      <div class="col-4 border-start">
+        <div class="row">
+          <h3 class="col-12 text-center">Detalle Orden</h3>
+          <div class="col-12 mt-2">
+            <p><b>Usuario:</b> <%=orden[0].cliente.nombre%></p>
+            <p><b>Email:</b> <%=orden[0].cliente.email%></p>
+            <p><b>Productos:</b> <%=orden[0].cantidad%></p>
+            <p class="fs-4"><b>Total:</b> $<%=orden[0].total%></p>
+          </div>
+        </div>
+      </div>
+    </article>
+</section>

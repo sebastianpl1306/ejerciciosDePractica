@@ -1,0 +1,25 @@
+<section class="container my-3">
+    <article class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+      <h3 class="col-12">Mis ordenes</h3>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">fecha</th>
+            <th scope="col">cantidad fotos</th>
+            <th scope="col">total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <%ordenes.forEach( orden =>{%>
+          <tr>
+            <th scope="row"><a href="/detalle_orden/<%=orden.id%>"><%=orden.id%></a></th>
+            <td><%=orden.fecha%></td>
+            <td><%=orden.cantidad%></td>
+            <td><%=orden.total%></td>
+          </tr>
+          <%})%>
+        </tbody>
+      </table>
+    </article>
+</section>

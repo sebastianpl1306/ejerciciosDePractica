@@ -1,5 +1,5 @@
 /**
- * Foto.js
+ * Orden.js
  *
  * @description :: A model definition represents a database table/collection.
  * @docs        :: https://sailsjs.com/docs/concepts/models-and-orm/models
@@ -12,21 +12,10 @@ module.exports = {
     //  ╔═╗╦═╗╦╔╦╗╦╔╦╗╦╦  ╦╔═╗╔═╗
     //  ╠═╝╠╦╝║║║║║ ║ ║╚╗╔╝║╣ ╚═╗
     //  ╩  ╩╚═╩╩ ╩╩ ╩ ╩ ╚╝ ╚═╝╚═╝
-    titulo: {
-      type: 'string'
-    },
-    descripcion: {
-      type: 'string'
-    },
-    ruta: {
-      type: 'string'
-    },
-    precio: {
-      type: 'string'
-    },
-    activa: {
-      type: 'boolean'
-    },
+    fecha: { type: 'number', autoCreatedAt: true, },
+    cantidad: { type: 'number'},
+    total: { type: 'number' },
+
     //  ╔═╗╔╦╗╔╗ ╔═╗╔╦╗╔═╗
     //  ║╣ ║║║╠╩╗║╣  ║║╚═╗
     //  ╚═╝╩ ╩╚═╝╚═╝═╩╝╚═╝
@@ -35,6 +24,15 @@ module.exports = {
     //  ╔═╗╔═╗╔═╗╔═╗╔═╗╦╔═╗╔╦╗╦╔═╗╔╗╔╔═╗
     //  ╠═╣╚═╗╚═╗║ ║║  ║╠═╣ ║ ║║ ║║║║╚═╗
     //  ╩ ╩╚═╝╚═╝╚═╝╚═╝╩╩ ╩ ╩ ╩╚═╝╝╚╝╚═╝
+    cliente: {
+      model: 'cliente',
+      columnName: 'cliente_id'
+    },
+
+    detalle: {
+      collection: 'ordendetalle',
+      via: 'orden'
+    }
   },
 
 };

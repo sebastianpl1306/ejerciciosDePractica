@@ -12,7 +12,7 @@ module.exports = {
     //  ╔═╗╦═╗╦╔╦╗╦╔╦╗╦╦  ╦╔═╗╔═╗
     //  ╠═╝╠╦╝║║║║║ ║ ║╚╗╔╝║╣ ╚═╗
     //  ╩  ╩╚═╩╩ ╩╩ ╩ ╩ ╚╝ ╚═╝╚═╝
-    fecha: { type: 'number', autoCreatedAt: true, },
+    fecha: { type: 'string'},
     cantidad: { type: 'number'},
     total: { type: 'number' },
 

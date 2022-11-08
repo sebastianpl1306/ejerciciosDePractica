@@ -1,0 +1,30 @@
+<section class="container my-3">
+    <% flash.get('mensaje').forEach( function (msg){%>
+      <div class="alert alert-primary" role="alert">
+          <%=msg%>
+      </div>
+    <% }); %>
+    <article class="row border-bottom mb-3">
+      <h1 class="col-12">TOP VENDIDAS</h1>
+    </article>
+    <article class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+      <h3 class="col-12">Encuentra las imagenes que mas te gusten</h3>
+      <%fotos.forEach( foto =>{%>
+      <div class="col">
+        <div class="shadow mb-5 bg-body rounded">
+          <img src="/images/<%=foto.ruta%>" class="w-100" width="300" height="200" alt="...">
+          <div class="row mt-2 p-3">
+            <h4><%=foto.titulo%></h4>
+            <p><small><%=foto.descripcion%></small></p>
+            <%if(session && session.cliente){%>
+            <div class="col-12 text-center">
+              <a href="#" class="btn btn-light">Lo deseo</a>
+              <a href="/agregar-carro-compra/<%=foto.id%>" class="btn btn-dark">Agregar al carrito <i class="fa fa-cart-plus fa-1x align-middle"></i></a>
+            </div>
+            <%}%>
+          </div>
+        </div>
+      </div>
+      <% });%>
+    </article>
+  </section>

@@ -46,3 +46,34 @@ ALTER TABLE carro_compra ADD
 	CONSTRAINT fk_carro_compra_has_cliente
 	FOREIGN KEY (cliente_id)
 	REFERENCES cliente(id);
+
+CREATE TABLE orden(
+    id SERIAL NOT NULL,
+    fecha DATE NOT NULL,
+    cantidad INT NOT NULL,
+    total INT NOT NULL,
+    cliente_id INT NOT NULL,
+    primary key(id)
+);
+
+ALTER TABLE orden ADD
+	CONSTRAINT fk_orden_has_cliente
+	FOREIGN KEY (cliente_id)
+	REFERENCES cliente(id);
+
+CREATE TABLE orden_detalle(
+    id SERIAL NOT NULL,
+    foto_id INT NOT NULL,
+    orden_id INT NOT NULL,
+    primary key(id)
+);
+
+ALTER TABLE orden_detalle ADD
+	CONSTRAINT fk_orden_detalle_has_foto
+	FOREIGN KEY (foto_id)
+	REFERENCES foto(id);
+
+ALTER TABLE orden_detalle ADD
+	CONSTRAINT fk_orden_detalle_has_orden
+	FOREIGN KEY (orden_id)
+	REFERENCES orden(id);

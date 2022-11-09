@@ -77,3 +77,20 @@ ALTER TABLE orden_detalle ADD
 	CONSTRAINT fk_orden_detalle_has_orden
 	FOREIGN KEY (orden_id)
 	REFERENCES orden(id);
+
+CREATE TABLE deseados(
+    id SERIAL NOT NULL,
+    cliente_id INT NOT NULL,
+    foto_id INT NOT NULL,
+    primary key(id)
+);
+
+ALTER TABLE deseados ADD
+	CONSTRAINT fk_deseados_has_foto
+	FOREIGN KEY (foto_id)
+	REFERENCES foto(id);
+
+ALTER TABLE deseados ADD
+	CONSTRAINT fk_deseados_has_cliente
+	FOREIGN KEY (cliente_id)
+	REFERENCES cliente(id);

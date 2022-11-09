@@ -1,0 +1,30 @@
+<section class="container my-3">
+    <% flash.get('mensaje').forEach( function (msg){%>
+      <div class="alert alert-primary" role="alert">
+          <%=msg%>
+      </div>
+    <% }); %>
+    <article class="row border-bottom mb-3">
+      <h1 class="col-12">Mis Deseos</h1>
+    </article>
+    <article class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+      <h3 class="col-12">Encuentra las imagenes que mas te gusten</h3>
+      <%elementos.forEach( elemento =>{%>
+      <div class="col">
+        <div class="shadow mb-5 bg-body rounded">
+          <img src="/images/<%=elemento.foto.ruta%>" class="w-100" width="300" height="200" alt="...">
+          <div class="row mt-2 p-3">
+            <h4><%=elemento.foto.titulo%></h4>
+            <p><small><%=elemento.foto.descripcion%></small></p>
+            <h5 class="col-7">$<%=elemento.foto.precio%></h5>
+            <%if(session && session.cliente){%>
+            <div class="col-12 text-center">
+              <a href="/eliminar-deseos/<%=elemento.foto.id%>" class="btn btn-danger">Ya no lo deseo <i class="fa fa-trash fa-1x align-middle"></i></a>
+            </div>
+            <%}%>
+          </div>
+        </div>
+      </div>
+      <% });%>
+    </article>
+  </section>

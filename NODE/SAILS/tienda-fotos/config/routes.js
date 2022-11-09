@@ -33,6 +33,9 @@ module.exports.routes = {
   'GET /mis-ordenes': 'CompraController.misOrdenes',
   'GET /detalle_orden/:ordenId': 'CompraController.detalleOrden',
   'GET /top-vendidas': 'PrincipalController.topVendidas',
+  'GET /mis-deseos': 'DeseosController.misDeseos',
+  'GET /agregar-deseos/:fotoId': 'DeseosController.agregarDeseos',
+  'GET /eliminar-deseos/:fotoId': 'DeseosController.eliminarDeseos',
   /***************************************************************************
   *                                                                          *
   * More custom routes here...                                               *

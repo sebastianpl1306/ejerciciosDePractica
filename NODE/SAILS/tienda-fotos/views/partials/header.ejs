@@ -15,6 +15,11 @@
           <a class="nav-link text-secondary" href="/inicio-sesion"><%=sails.__("Iniciar Sesión")%></a>
           <a class="nav-link text-secondary" href="/registro"><%=sails.__("Registro")%></a>
         </form>
+        <%}else if(session && session.admin){%>
+          <form class="d-flex align-middle">
+            <span class="nav-link text-secondary px-2"><i class="fa fa-user fa-1x"></i> <%=session.admin.nombre%></span>
+            <a class="nav-link text-dark px-2" href="/admin/cerrar-sesion"><%=sails.__("Cerrar sesión")%> <i class="fa fa-door-open fa-1x"></i></a>
+          </form>
         <%}else{%>
         <form class="d-flex align-middle">
           <span class="nav-link text-secondary px-2"><i class="fa fa-user fa-1x"></i> <%=session.cliente.nombre%></span>

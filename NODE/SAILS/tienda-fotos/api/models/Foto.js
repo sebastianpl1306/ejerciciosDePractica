@@ -22,7 +22,8 @@ module.exports = {
       type: 'string'
     },
     precio: {
-      type: 'string'
+      type: 'number',
+      columnType: 'number'
     },
     activa: {
       type: 'boolean'

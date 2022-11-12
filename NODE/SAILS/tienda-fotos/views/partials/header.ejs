@@ -10,7 +10,7 @@
           <a class="nav-link" href="/acerca-de"><%=sails.__("Acerca de")%></a>
           <a class="nav-link" href="/top-vendidas"><%=sails.__("Top")%></a>
         </div>
-        <%if(!session || !session.cliente){%>
+        <%if(!session || !session.cliente && !session.admin){%>
         <form class="d-flex">
           <a class="nav-link text-secondary" href="/inicio-sesion"><%=sails.__("Iniciar Sesión")%></a>
           <a class="nav-link text-secondary" href="/registro"><%=sails.__("Registro")%></a>

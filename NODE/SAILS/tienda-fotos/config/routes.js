@@ -45,9 +45,11 @@ module.exports.routes = {
 
   //Rutas del ADMIN
   'Get /admin/inicio-sesion': 'AdminController.inicioSesion',
-  'Get /admin/procesar-inicio-sesion': 'AdminController.procesarInicioSesion',
+  'POST /admin/procesar-inicio-sesion': 'AdminController.procesarInicioSesion',
   'Get /admin/principal': 'AdminController.principal',
   'Get /admin/cerrar-sesion': 'AdminController.cerrarSesion',
+  'Get /admin/agregar-foto': 'AdminController.agregarFoto',
+  'POST /admin/procesar-agregar-foto': 'AdminController.procesarAgregarFoto',
   /***************************************************************************
   *                                                                          *
   * More custom routes here...                                               *

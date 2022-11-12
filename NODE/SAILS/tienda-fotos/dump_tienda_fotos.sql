@@ -8,6 +8,16 @@ CREATE TABLE cliente(
     primary key(id)
 );
 
+CREATE TABLE admin(
+    id SERIAL NOT NULL,
+    nombre VARCHAR NOT NULL,
+    email VARCHAR NOT NULL,
+    clave VARCHAR NOT NULL,
+    primary key(id)
+);
+
+INSERT INTO admin(nombre, email, clave) VALUES('sebastian admin', 'admin@gmail.com', '123');
+
 CREATE TABLE foto(
     id SERIAL NOT NULL,
     titulo VARCHAR NOT NULL,

@@ -72,4 +72,12 @@ module.exports = {
     request.addFlash('menasaje', 'No hay foto seleccionada');
     return response.redirect('/admin/agregar-foto');
   },
+  clientes: async (request, response) =>{
+    if (!request.session || !request.session.admin) {
+      request.addFlash('mensaje', 'Sesión inválida');
+      return response.redirect('/admin/inicio-sesion');
+    }
+    let clientes = await Cliente.find();
+    response.view('pages/admin/view_clientes', {clientes});
+  }
 }

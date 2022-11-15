@@ -50,6 +50,7 @@ module.exports.routes = {
   'Get /admin/cerrar-sesion': 'AdminController.cerrarSesion',
   'Get /admin/agregar-foto': 'AdminController.agregarFoto',
   'POST /admin/procesar-agregar-foto': 'AdminController.procesarAgregarFoto',
+  'Get /admin/clientes': 'AdminController.clientes',
   /***************************************************************************
   *                                                                          *
   * More custom routes here...                                               *

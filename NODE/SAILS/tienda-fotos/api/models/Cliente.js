@@ -21,7 +21,9 @@ module.exports = {
     clave: {
       type: 'string'
     },
-
+    activo: {
+      type: 'boolean'
+    }
     //  ╔═╗╔╦╗╔╗ ╔═╗╔╦╗╔═╗
     //  ║╣ ║║║╠╩╗║╣  ║║╚═╗
     //  ╚═╝╩ ╩╚═╝╚═╝═╩╝╚═╝

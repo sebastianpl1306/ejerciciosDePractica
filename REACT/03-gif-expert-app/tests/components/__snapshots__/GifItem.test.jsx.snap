@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en <GifItem/> Snapshopt del componente 1`] = `
+<div>
+  <div
+    class="card"
+  >
+    <img
+      alt="One Punch"
+      src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExY2Q5MGJkOGIyYTc2MmQ1YjUwNjRkMmE4ZjY1ZWFlZWZmNTI3MzczYSZjdD1n/yo3TC0yeHd53G/giphy.gif"
+    />
+    <p>
+      One Punch
+    </p>
+  </div>
+</div>
+`;

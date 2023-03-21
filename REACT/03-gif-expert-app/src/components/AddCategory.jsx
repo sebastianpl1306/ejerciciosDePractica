@@ -1,4 +1,5 @@
-import { useState } from "react"
+import { useState } from "react";
+import PropTypes from 'prop-types';
 
 export const AddCategory = ({onAddNewCategory}) => {
     const [inputValue, setinputValue] = useState('One Punch')
@@ -12,11 +13,12 @@ export const AddCategory = ({onAddNewCategory}) => {
         const value = inputValue.trim();
         if (value.length < 3 ) return;
 
-        onAddNewCategory(inputValue);
+        setinputValue('');
+        onAddNewCategory(inputValue.trim());
     }
 
     return (
-        <form onSubmit={ onSubmit }>
+        <form onSubmit={ onSubmit } aria-label='form'>
             <input 
                 type='text'
                 placeholder='Buscar Gifs'
@@ -25,4 +27,8 @@ export const AddCategory = ({onAddNewCategory}) => {
             />
         </form>
     )
+}
+
+AddCategory.propTypes = {
+    onAddNewCategory: PropTypes.func.isRequired
 }

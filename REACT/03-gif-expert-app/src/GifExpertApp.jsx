@@ -5,8 +5,8 @@ export const GifExpertApp = () => {
     const [categories, setCategories] = useState(['One Punch']);
 
     const onAddCategory = (newCategory) =>{
-        if (categories.includes(newCategory)) return;
-        setCategories([newCategory, ...categories]);
+      if (categories.includes(newCategory)) return;
+      setCategories([newCategory, ...categories]);
     };
 
   return (
@@ -14,9 +14,8 @@ export const GifExpertApp = () => {
         <h1>GifExpertApp</h1>
         <AddCategory onAddNewCategory={onAddCategory}/>
         {
-            categories.map((category)=> <GifGrid key={category} category={category}/>)
+          categories.map((category)=> <GifGrid key={category} category={category}/>)
         }
-        {/* <button onClick={onAddCategory}>Agregar</button> */}
     </>
   )
 }

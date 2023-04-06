@@ -4,6 +4,7 @@ export const TodoItem = ({ todo, onDeleteTodo, onToggleTodo }) => {
         <span 
           className={`${todo.done ? 'text-decoration-line-through' : ''}`} 
           onClick={() => onToggleTodo(todo.id)}
+          aria-label="span"
         >{todo.todo}</span>
         <button 
           className="btn btn-danger"

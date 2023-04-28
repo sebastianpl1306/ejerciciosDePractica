@@ -1,4 +1,5 @@
 import { loginWithEmailPassword, logoutFireBase, registerUserWithEmailPassword, singInWithGoogle } from '../../FireBase/providers';
+import { clearNotesLogout } from '../journal';
 import { checkingCredentials, logout, login } from './authSlice';
 
 export const startGoogleSignIn = () =>{
@@ -38,6 +39,7 @@ export const startLogout = () =>{
     return async( dispatch ) =>{
         await logoutFireBase();
 
+        dispatch( clearNotesLogout() );
         dispatch(logout());
     }
 }

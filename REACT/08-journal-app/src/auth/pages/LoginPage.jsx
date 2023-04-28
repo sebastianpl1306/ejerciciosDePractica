@@ -9,16 +9,18 @@ import { Google } from '@mui/icons-material';
 import { Alert, Button, Grid, Link, TextField, Typography } from '@mui/material';
 import { AuthLayout } from '../layout/AuthLayout';
 
+const initialForm = {
+  email: '',
+  password: ''
+};
+
 export const LoginPage = () => {
   const { status, errorMessage } = useSelector(state => state.auth);
   const dispatch = useDispatch();
 
   const isLogin = useMemo(() => status == 'checking', [status]);
 
-  const { email, password, onInputChange } = useForm({
-    email: '',
-    password: ''
-  });
+  const { email, password, onInputChange } = useForm(initialForm);
 
   const onSubmit = (event) =>{
     event.preventDefault();

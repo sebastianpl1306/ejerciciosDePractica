@@ -1,0 +1,15 @@
+<h4>Listado</h4>
+<ul class="list-group">
+  <li class="list-group-item"
+    [ngClass]="{
+      'list-group-item-success': isFirst,
+      'list-group-item-primary': isEven
+    }"
+    *ngFor="let character of characterList; let i = index; let isFirst = first; let isLast = last; let isEven = even; let isOdd = odd">
+    <span class="text-primary">{{ i }}. </span>
+    <span>{{ character.name }} - </span>
+    <strong>Power: </strong> {{ character.power }}
+    <span>Es par: {{ isEven }}</span>
+    <span>Es Impar: {{ isOdd }}</span>
+  </li>
+</ul>

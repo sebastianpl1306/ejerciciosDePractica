@@ -1,0 +1,9 @@
+<div class="bg-dark border-right p-3" id="sidebar">
+  <h3 class="text-light">GifApp</h3>
+  <hr class="text-white">
+  <div class="list-group list-reset my-2" *ngFor="let tag of tagsHistory">
+    <button class="list-group-item list-group-item-action" (click)="selectedTagHistory(tag)">
+      {{ tag | titlecase}}
+    </button>
+  </div>
+</div>

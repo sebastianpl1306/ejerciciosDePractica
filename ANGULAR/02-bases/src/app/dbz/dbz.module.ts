@@ -20,4 +20,5 @@ import { AddCharacterComponent } from './components/add-character/add-character.
     FormsModule
   ],
 })
+
 export class DbzModule { }

@@ -3,6 +3,7 @@ import { v4 as uuIdv4 } from 'uuid';
 
 import { EntriesContext, entriesReducer } from './';
 import { Entry } from '@/interfaces';
+import { entriesContextTypes } from '@/constants';
 
 export interface EntriesState {
   entries: Entry[]
@@ -38,22 +39,22 @@ type EntriesProviderProps = {
 export const EntriesProvider = ({ children }: EntriesProviderProps) => {
   const [state, dispatch] = useReducer(entriesReducer, Entries_INITIAL_STATE);
 
-  // const addNewEntry = ( description: string ) =>{
-  //   const newEntry: Entry = {
-  //     _id: uuIdv4(),
-  //     description: description,
-  //     createdAt: Date.now(),
-  //     status: 'pending'
-  //   }
+  const addNewEntry = ( description: string ) =>{
+    const newEntry: Entry = {
+      _id: uuIdv4(),
+      description: description,
+      createdAt: Date.now(),
+      status: 'pending'
+    }
 
-  //   dispatch({ type: entriesContextTypes.ADD_ENTRY, payload: newEntry});
-  // }
+    dispatch({ type: entriesContextTypes.ACTION_TYPE_ADD_ENTRY, payload: newEntry});
+  }
 
   return (
     <EntriesContext.Provider value={{
       ...state,
       //métodos
-      // addNewEntry,
+      addNewEntry,
     }}>
       { children }
     </EntriesContext.Provider>

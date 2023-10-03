@@ -3,7 +3,9 @@ import { UIContext, uiReducer } from './';
 import { uiContextTypes } from '@/constants';
 
 export interface UIState {
-  sideMenuOpen: boolean
+  sideMenuOpen: boolean,
+  isAddingEntry: boolean;
+  isDragging: boolean;
 }
 
 type UIProviderProps = {
@@ -11,7 +13,9 @@ type UIProviderProps = {
 }
 
 const UI_INITIAL_STATE: UIState = {
-  sideMenuOpen: false
+  sideMenuOpen: false,
+  isAddingEntry: false,
+  isDragging: false
 }
 
 export const UIProvider = ({ children }: UIProviderProps) => {
@@ -25,13 +29,28 @@ export const UIProvider = ({ children }: UIProviderProps) => {
     dispatch({ type: uiContextTypes.ACTION_TYPE_CLOSE_SIDEBAR});
   }
 
+  const setIsAddingEntry = (isAdding: boolean ) => {
+    dispatch({ type: uiContextTypes.ACTION_TYPE_CHANGE_STATUS_ADD_ENTRY, payload: isAdding})
+  }
+
+  const startDragging = () =>{
+    dispatch({ type: uiContextTypes.ACTION_TYPE_START_DRAGGING})
+  }
+
+  const endDragging = () =>{
+    dispatch({ type: uiContextTypes.ACTION_TYPE_END_DRAGGING})
+  }
+
   return (
     <UIContext.Provider value={{
       ...state,
   
       //Métodos
       openSideMenu,
-      closeSideMenu
+      closeSideMenu,
+      setIsAddingEntry,
+      startDragging,
+      endDragging
     }}>
       { children }
     </UIContext.Provider>

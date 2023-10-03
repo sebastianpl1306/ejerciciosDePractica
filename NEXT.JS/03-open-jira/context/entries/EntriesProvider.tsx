@@ -50,11 +50,16 @@ export const EntriesProvider = ({ children }: EntriesProviderProps) => {
     dispatch({ type: entriesContextTypes.ACTION_TYPE_ADD_ENTRY, payload: newEntry});
   }
 
+  const updateEntry = ( entry: Entry ) =>{
+    dispatch({ type: entriesContextTypes.ACTION_TYPE_UPDATE_ENTRY, payload: entry });
+  }
+
   return (
     <EntriesContext.Provider value={{
       ...state,
       //métodos
       addNewEntry,
+      updateEntry,
     }}>
       { children }
     </EntriesContext.Provider>

@@ -5,6 +5,7 @@ import { Entry } from '@/interfaces';
 type EntriesActionType = 
 | { type: entriesContextTypes.ACTION_TYPE_ADD_ENTRY, payload: Entry}
 | { type: entriesContextTypes.ACTION_TYPE_UPDATE_ENTRY, payload: Entry}
+| { type: entriesContextTypes.GET_ENTRIES, payload: Entry[]}
 
 export const entriesReducer = ( state: EntriesState, action: EntriesActionType ): EntriesState => {
     switch (action.type) {
@@ -23,6 +24,11 @@ export const entriesReducer = ( state: EntriesState, action: EntriesActionType )
                     }
                     return entry;
                 })
+            }
+        case entriesContextTypes.GET_ENTRIES:
+            return{
+                ...state,
+                entries: [...action.payload]
             }
         default:
             return state;

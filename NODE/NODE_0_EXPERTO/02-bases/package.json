@@ -1,0 +1,20 @@
+{
+  "name": "02-bases",
+  "version": "1.0.0",
+  "description": "Esta es mi primera aplicación real de Node",
+  "main": "app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "start:dev": "nodemon src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sebastian Pabon Lopez",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  },
+  "dependencies": {
+    "get-age": "^1.0.1",
+    "uuid": "^9.0.1"
+  }
+}

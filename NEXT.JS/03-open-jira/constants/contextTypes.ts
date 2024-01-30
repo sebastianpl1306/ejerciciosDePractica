@@ -8,5 +8,6 @@ export enum uiContextTypes {
 
 export enum entriesContextTypes {
     ACTION_TYPE_ADD_ENTRY = '[Entry] Add entry',
-    ACTION_TYPE_UPDATE_ENTRY = '[Entry] Update Entry'
+    ACTION_TYPE_UPDATE_ENTRY = '[Entry] Update Entry',
+    GET_ENTRIES = '[Entry] Get Entries',
 }

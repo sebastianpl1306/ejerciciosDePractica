@@ -125,6 +125,9 @@ yarn-error.log*
 *.sln
 *.sw?
 
+# next.js
+/.next/
+/out/
 
 NODE/aprendiendo_node/.DS_Store
 NODE/aprendiendo_node/node_modules

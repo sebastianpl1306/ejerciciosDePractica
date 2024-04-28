@@ -1,0 +1,23 @@
+#Versión de node a ejecutar
+FROM node:20-alpine
+
+#Aplicación
+WORKDIR /app
+
+#Copiar el package.json a la imagen
+COPY package.json /
+
+#Instalar paquetes
+RUN npm install
+
+#Copiar toda la información a la imagen
+COPY . /
+
+#Desplegar el proyecto
+RUN npm run build
+
+#Exponer el puerto
+EXPOSE 3000
+
+#Comando que inicializa la aplicación
+CMD ["npm","start"]

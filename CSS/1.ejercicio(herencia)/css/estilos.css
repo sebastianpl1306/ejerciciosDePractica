@@ -1,0 +1,40 @@
+body{
+	/*body es el padre de los elementos que esten dentro de el y sus propiedades 
+	las eredan sus hijos*/
+	background-color: Black;
+	/*El important nos permite dar toda la importancia al estilo que deseemos
+	ya sea que se aplique antes o despues siempre tendra la importancia*/
+	color: white !important;
+	font-family: Verdana;
+}
+
+/*en este caso para el color del parrafo va a priorizar el que sea mas especifico
+en este caso el selector body p es mas especifico aunque este de primero*/
+body p{
+	color: green;
+}
+
+p{
+	color: blue;
+}
+
+h1 {
+	font-family: Arial;
+}
+
+a{
+	/*inherit permite que pueda heredar las propiedades de su padre en este caso
+	de la etiqueta body*/
+	color: inherit;
+}
+
+div{
+	margin-top: 10px;
+	margin-left: 20px;
+}
+
+/*El color rojo va prevalecer sobre el blanco ya que los estilos en cascada
+dan prioridad al ultimo aplicado*/
+body{
+	color: red;
+  }

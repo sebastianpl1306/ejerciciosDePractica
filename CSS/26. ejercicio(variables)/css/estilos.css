@@ -1,0 +1,9 @@
+@import './variables.css';
+
+h1, h2 {
+  font-family: var(--fuente-titulos);
+}
+
+h1, h2, a {
+  color: var(--color-principal);
+}

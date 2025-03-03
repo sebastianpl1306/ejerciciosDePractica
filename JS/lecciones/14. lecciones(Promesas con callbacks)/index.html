@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Ejemplo</title>
+</head>
+
+<body>
+
+  <div id="contenido"></div>
+
+  <script src="javascripts/babel.min.js"></script>
+
+  <script type="text/babel">
+
+  // function arreglarElCuarto() {
+  //   console.log('Cuarto arreglado');
+  // }
+
+  function arreglarElCuarto() {
+    var promesa = new Promise(function(resolve, reject){
+      // resolve('Cuarto arreglado');
+      reject('No se arregló');
+    })
+    return promesa;
+  }
+
+  arreglarElCuarto().then(function(resultado){
+    console.log(resultado);
+  }).catch(function(error){
+    console.log("Promesa no cumplida");
+    console.log(error);
+  })
+
+
+
+ </script>
+
+
+
+</body>
+
+</html>

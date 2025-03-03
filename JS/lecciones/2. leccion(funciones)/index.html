@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Las variables que estan por fuera de todo son de ámbito global y estas si pueden llamarse dentro o fuera de funciones
+        var x = "prueba";
+        /*Las funciones son un conjunto de estrucciones que al ser ejecutadas nos muestran el valor de un elemento
+        las funciones nos permiten reutilizar codigó*/
+        function sumar(a,b){
+            /*Las variables que estan dentro de una funcion son de ámbito local lo que significa que no pueden llamarse
+            fuera de la funcion*/
+            var suma = a+b;
+            console.log(x);
+            return suma;
+        }
+
+        var resultado = sumar(4,5);
+        console.log(resultado);//Resultado 9
+
+        /*Las variables tambien pueden ser funciones*/
+        var add = sumar;
+
+        /*y podremos llamarla en otra variable*/
+        var d = add(5,2);
+        console.log(d);//Resultado 7
+
+        /*Taller de funciones*/
+        //Define cinco variables tipo string, cada una de las cuales contendrá el nombre de una de tus canciones preferidas.
+        //Define una función que recibe como parámetro el nombre de la canción y que imprima dicha canción cada vez que la invoques.
+        //Imprime un título que diga “Mi lista de canciones preferidas”.
+        //Invoca a la función definida en (b) para cada una de las canciones.
+        var cancion1 = "favorito";
+        var cancion2 = "bailador";
+        var cancion3 = "permitame";
+        var cancion4 = "Girls like you";
+        var cancion5 = "Esta noche";
+
+        function nombreCancion(cancion){
+            return cancion;
+        }
+
+        console.log("Mi lista de canciones preferidas:");
+        console.log(nombreCancion(cancion1));
+        console.log(nombreCancion(cancion2));
+        console.log(nombreCancion(cancion3));
+        console.log(nombreCancion(cancion4));
+        console.log(nombreCancion(cancion5));
+    </script>
+</body>
+</html>

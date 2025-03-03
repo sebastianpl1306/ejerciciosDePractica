@@ -1,0 +1,56 @@
+body {
+	font-family: Arial;
+	width: 90%;
+	margin-left: 5%;
+}
+
+header {
+	padding: 1vh 1vw;
+	margin-bottom: 1vh;
+	border-radius: 1vh;
+	background-color: #669999;
+}
+
+#contenido {
+	margin: 1%;
+}
+
+header h1 {
+	padding-left: 1%;
+	font-size: 1.5em;
+}
+
+footer {
+	font-size: 0.8em;
+	border-top: solid 2px #1f47a8;
+	padding-top: 1vw;
+	margin-top: 1vw;
+	text-align: center;
+}
+
+figure {
+	text-align: center;
+	margin: 100px;
+}
+
+figure img {
+	width: 420px;
+}
+
+#imagen1 {
+	-ms-transform: rotate(7deg); /* IE 9 */
+	-webkit-transform: rotate(7deg); /* Chrome, Safari, Opera */
+	transform: rotate(7deg);
+}
+
+#imagen2 {
+	-ms-transform: rotate(90deg); /* IE 9 */
+	-webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+	transform: rotate(90deg);
+}
+
+#imagen3 {
+	-ms-transform: rotate(-10deg); /* IE 9 */
+	-webkit-transform: rotate(-10deg); /* Chrome, Safari, Opera */
+	transform: rotate(-10deg);
+}

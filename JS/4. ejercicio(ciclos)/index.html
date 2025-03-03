@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var numeros = [5,15,22,25,30,52,5,1,0];
+        /*Esta funcion me detecta el numero mas pequeño de un arreglo*/
+        function buscarValorMin(valorMin){
+            var min = valorMin[0];
+            for(var i in valorMin){
+                if(valorMin[i]<min){
+                    min = valorMin[i];
+                }else{
+                }
+            }
+            return min;
+        }
+
+        /*Esta funcion me detecta el numero mas grande de un arreglo*/
+        function buscarValorMax(valorMax){
+            var max = valorMax[0];
+            for(var i in valorMax){
+                if(valorMax[i]>max){
+                    max = valorMax[i];
+                }else{
+                }
+            }
+            return max;
+        }
+
+        /*Esta funcion me calcula el promedio*/
+        function calculoPromedio(numerosPromedio,numeroMin,numeroMax){
+            var cont = 0;
+            var total = 0;
+            for(var i in numerosPromedio){
+                total+=numerosPromedio[i];
+                cont++;
+            }
+            total -= (numeroMax-numeroMin);
+            return total/(cont-2);
+        }
+
+        var min = buscarValorMin(numeros);
+        var max = buscarValorMax(numeros);
+        console.log(numeros);
+        console.log(min);
+        console.log(max);
+
+        console.log(calculoPromedio(numeros,min,max));
+    </script>
+</body>
+</html>

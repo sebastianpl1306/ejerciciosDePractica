@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function encabezadoEvento(evento, lugar){
+            return "Evento: "+evento+". Lugar: "+lugar;
+        }
+
+        console.log(encabezadoEvento("Intercambio de Libros", "Biblioteca"));
+        console.log(encabezadoEvento("Lectura de Poemas", "Sala A"));
+        
+        function limpiarNombreParticipante(nombre, apellido){
+            return apellido.trim().toUpperCase()+", "+nombre.trim().toLowerCase();
+        }
+
+        console.log(limpiarNombreParticipante("    Luis", "Castro   "));
+        console.log(limpiarNombreParticipante(" ANA", "MENDEZ   "));
+    </script>
+</body>
+</html>

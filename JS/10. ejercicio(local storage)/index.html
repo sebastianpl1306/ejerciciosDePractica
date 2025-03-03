@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #pais{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <select name="pais" id="">
+            <option value="colombia">colombia</option>
+            <option value="brasil">brasil</option>
+            <option value="canada">canada</option>
+            <option value="newYork">newYork</option>
+        </select>
+        <button onclick="guardarVisita(this.form.pais.value)">Visitar</button>
+    </form>
+    <div id="pais">Ultimo Pais Visitado:</div>
+    <script src="./main.js"></script>
+</body>
+</html>

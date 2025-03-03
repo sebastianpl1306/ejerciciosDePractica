@@ -1,0 +1,36 @@
+@font-face {
+	font-family: FuenteLato;
+	src: url(../fuentes/Lato-Regular.ttf);
+}
+
+body{
+	margin: 20px;
+	font-family: Lora;
+}
+
+.resaltado{
+	background-color: yellow;
+	color: black;
+}
+
+#menu-principal{
+	font-family: FuenteLato;
+	font-style: italic;
+
+
+	padding: 10px 0px;
+}
+
+footer{
+	border-top: solid 1px black;
+	padding-top: 10px;
+	text-align: center;
+}
+
+h1.titulo{
+	font-family: FuenteLato;
+	font-variant: small-caps;
+	background-color: aliceblue;
+	text-align: center;
+	padding: 10px;
+}

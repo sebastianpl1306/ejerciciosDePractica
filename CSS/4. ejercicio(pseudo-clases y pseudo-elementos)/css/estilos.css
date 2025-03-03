@@ -1,0 +1,58 @@
+body {
+	margin: 20px;
+	font-family: Verdana;
+}
+
+#menu-principal {
+	padding: 10px 0px;
+}
+
+#menu-principal a {
+	color: green;
+	text-decoration: none;
+}
+
+#menu-principal a:hover {
+	text-decoration: underline;
+}
+
+#menu-principal a + a::before {
+	content: " | ";
+	color: black;
+}
+
+footer {
+	margin-top: 20px;
+	border-top: solid 1px black;
+	padding-top: 10px;
+	text-align: center;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table, th, td {
+	border: solid 1px black;
+	padding: 10px;
+}
+
+tbody tr:nth-child(even) {
+	background: #CCC;
+}
+
+tbody tr:nth-child(odd) {
+	background: #CCF;
+}
+
+tbody tr:nth-child(even):hover {
+	background: #DDD;
+}
+
+tbody tr:nth-child(odd):hover {
+	background: #DDF;
+}
+
+.sombra {
+	box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+}

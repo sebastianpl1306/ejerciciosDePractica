@@ -1,0 +1,27 @@
+/**/
+article[class^='caja']{
+    /*la primera propiedad es border que nos crea un borde
+    al rededor de la caja y este recibe 3 valores
+    tamaño del borde, tipo de borde(none, hidden, dotted, solid, etc) 
+    y color del borde*/
+    /*border: 1px solid black;*/
+    display: inline-block;
+    height: 220px;
+    width: 400px;
+    /*tambien podemos separar los valores del borde*/
+    border: 2px;
+    border-style: solid;
+    border-color: black;
+}
+
+.caja1{
+    /*Margin da los espacios fuera del contenedor,
+    este recibe minimo 1 valor y maximo 4*/
+    margin: 10px 20px 30px 15px;
+}
+
+.caja2 + .caja3{
+    /*padding da los espacios dentro de la caja y funciona
+    igual que margin recibe 1 o 4 valores*/
+    padding: 30px;
+}

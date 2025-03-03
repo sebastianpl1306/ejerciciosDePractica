@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*Esta funcion que transforma horas y minutos, a minutos*/
+        function totalMinutos(horas,minutos){
+            var total = (horas * 60) + minutos;
+            return total;
+        }
+
+        console.log(totalMinutos(5,25));
+        console.log(totalMinutos(1,5));
+        console.log(totalMinutos(0,15));
+
+        /*Es una función que calcula la cantidad de dinero recolectado dado un costo y la cantidad de participantes.*/
+        function cantidadRecolectadaSimple(cantidadRecolectada,cantidadParticipantes){
+            var total = (cantidadRecolectada*cantidadParticipantes);
+            return total;
+        }
+
+        console.log(cantidadRecolectadaSimple(10,5));
+        console.log(cantidadRecolectadaSimple(1,5));
+
+        /*Es una función que calcula la cantidad de dinero recolectado dado los siguientes parámetros, recibidos en este orden:*/
+        //- costoEstudiante
+        //- costoAdulto
+        //- cantidadEstudiantes
+        //- cantidadAdultos
+        function cantidadRecolectada(costoEstudiante,costoAdulto,cantidadEstudiantes,cantidadAdultos){
+            var totalEstudiante = cantidadRecolectadaSimple(costoEstudiante,cantidadEstudiantes);
+            var totalAdultos = cantidadRecolectadaSimple(costoAdulto,cantidadAdultos);
+            var total = totalEstudiante + totalAdultos;
+            return total;
+        }
+        console.log(cantidadRecolectada(1, 5, 20, 4));
+        console.log(cantidadRecolectada(0, 5, 20, 3));
+    </script>
+</body>
+</html>

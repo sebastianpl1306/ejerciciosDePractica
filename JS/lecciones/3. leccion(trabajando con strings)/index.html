@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lección: Trabajando con Strings</title>
+</head>
+<body>
+    <script>
+        /*DEFINICÓN DE STRINGS: las cadenas de caracteres o strings están conformados por texto, que pueden contener: letras, números, símbolos, signos de puntuación, entre otros.
+
+        Los valores de las variables tipo strings se expresan en sintaxis JavaScript con comillas, encerrando el valor entre comillas simples ( ' ' ) o comillas dobles ( “ ” ). Aquí te mostramos algunos ejemplos de strings:*/
+        /*
+        'Esto es una cadena de texto. ';
+
+        JavaScript
+
+        "Esta es otra cadena de texto con comillas dobles.";
+
+        JavaScript
+        En esta lectura estudiaremos algunas de las características y funcionalidades de los strings en JavaScript.
+        */
+
+        /*Propiedades y métodos*/
+        /*Longitud (length)
+        Length es una propiedad de todos los objetos de tipo String, que nos retorna un valor numérico del tamaño de la cadena de caracteres que estamos almacenando en la variable de tipo string. Como es una propiedad no se requiere accederla finalizando con paréntesis; para acceder a esta propiedad ponemos el nombre de la variable o el valor del string y finalizamos con un punto y a continuación sin ningún espacio extra la palabra length.*/
+
+        "Primer nombre".length;
+        var nombre = "Primer nombre";
+        console.log(nombre.length)
+
+        /*Minusculas (toLowerCase)
+        El método toLowerCase de los objetos tipo string, nos permite obtener la cadena de caracteres convertida a caracteres en minúscula; los números, símbolos y otros caracteres no se ven afectados. Recordemos que la manera de llamar un método o una función es el nombre de la función finalizado con los parámetros que recibe el método, separados por comas y encerrados entre paréntesis.
+
+        Para nuestro caso, ponemos el valor del string, continuamos con un punto, seguido de apertura y cierre de los paréntesis (esta función no recibe ningún parámetro, con lo cual dejamos este espacio vacío) y terminamos con un punto y coma. A continuación puedes ver un ejemplo:*/
+        console.log("CURSO DE JAVASCRIPT")
+        console.log("CURSO DE JAVASCRIPT" .toLowerCase ());
+
+        /*Mayúsculas (toUpperCase)
+        Así como tenemos un método para obtener una cadena de caracteres en minúsculas, el método toUpperCase nos devuelve el contenido del string en mayúsculas. En este caso los números, símbolos y otros caracteres tampoco se ven afectados.*/
+        console.log("estoy aprendiendo javascript");
+        console.log("estoy aprendiendo javascript".toUpperCase());
+
+        /*Recortar (trim)
+        El método trim de una cadena de caracteres devuelve el valor del string, eliminando los caracteres en blanco que estén al inicio y al final de la cadena, sin importar la cantidad de caracteres en blanco que contenga. Por ejemplo:*/
+        console.log("     eliminando espacios en blanco        ");
+        console.log("     eliminando espacios en blanco        " .trim());
+
+        /*concatenando strings*/       
+        /*Existen dos formas de concatenar string y las mostraremos a continuación*/
+        function saludar(nombre, apellido, curso){
+            /*con el signo mas podemos concatenar cadenas de texto y variables*/
+            //var resultado ="Hola "+ nombre+" "+apellido+", bienvenido al curso "+curso;
+            /*Usado las comillas invertidas podemos llamar variables ${nombreVariable} y asi se concatenan
+            incluyendo los espacios*/
+            var resultado = `Hola ${nombre} ${apellido} ,bienvenido al curso ${curso}`;
+            return resultado;
+        }
+
+        console.log(saludar("sebastian", "pabon", "c++"));
+
+        /**/
+        function capitalize(nombre){
+            return nombre.charAt(0).toUpperCase()+nombre.slice(1).toLowerCase();
+        }
+
+        function arreglarFilas(fila){
+            var arreglarFila = fila.split(",");
+            var nombre = arreglarFila[0].trim();
+            var apellido = arreglarFila[1].trim();
+            return capitalize(nombre)+" "+capitalize(apellido);
+        }
+
+        console.log(arreglarFilas("  luiS,  BLANCO"));
+    </script>
+</body>
+</html>

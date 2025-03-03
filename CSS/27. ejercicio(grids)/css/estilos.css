@@ -1,0 +1,74 @@
+footer {
+  border-top: 1px solid black;
+  padding: 5px;
+}
+
+nav {
+  background-color: lightgray;
+}
+
+header {
+  border-bottom: 1px solid black;
+}
+
+main {
+  padding: 5px 10px;
+}
+
+/*para empezar a usar una grid debemos poner al contenedor padre la propiedad display: grid;
+esto es para comenzar a usar una grid*/
+body{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: grid;
+}
+
+/*Aca colocamos las propiedades para dispositivos pequeños*/
+@media{
+  /*la grid tendra 3 columnas: la primera de 150px y las otras son automaticas al tamaño del viewport*/
+  body{
+    grid-template-columns: 150px auto;
+  }
+
+  /*la propiedad grid-column-start me indica el inicio de la columna que debe iniciar de izquierda a derecha*/
+  /*la propiedad grid-column-end me indica el final de la columna siendo como ultimo valor 3*/
+  header{
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  nav{
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  main{
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+
+@media (min-width: 850px) {
+  body{
+    background-color: white;
+  }
+
+  header{
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  nav{
+    grid-column-start: 1;
+    grid-column-end: 1;
+  }
+
+  main{
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+
+  footer{
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}

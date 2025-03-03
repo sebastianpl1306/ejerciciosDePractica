@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>objetos</title>
+</head>
+<body>
+    <script>
+        var evento = {
+            nombre: "Evento 1",
+            descripcion: "Esto es una descripción",
+            fecha: new Date(2018,10,1)
+        };
+
+        function verificarCampo(campo){
+            if(campo == undefined && campo == null){
+                return false;
+            }else{
+                return true;
+            }
+        }
+        
+        function verificarString(string, largo){
+            if(verificarCampo(string)==true && string.trim().length > 0){
+                if(string.trim().length >= largo || largo == 0){
+                    return true;
+                }else{
+                    return false;
+                }
+            }else{
+                return false;
+            }
+        }
+
+        function verrificarFecha(fecha,minimaFecha){
+            if(verificarCampo(fecha)==true && fecha.getTime() > minimaFecha.getTime()){
+                return(true);
+            }else{
+                return(false);
+            }
+        }
+
+        function eventoValido(evento){
+            if (evento == null || evento == undefined){
+            return false;
+            }
+            return (
+            verificarString(evento.nombre, 3) &&
+            verificarString(evento.descripcion, 10) &&
+            verrificarFecha(evento.fecha, new Date(2018,0,1,0,0,0))
+            )
+        }
+
+        console.log(eventoValido(evento));
+    </script>
+</body>
+</html>

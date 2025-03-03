@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercadeo Digital</title>
+</head>
+<body>
+    <form action="">
+        <!--La etiqueta filset permite dar un contorno al formulario-->
+        <fieldset>
+            <!--La etiqueta legend permite dar el titulo al formulario-->
+            <legend>Mercadeo Digital</legend>
+            <!--La etiqueta label permite dar un titulo o nombre a un campo y con la propiedad for indicamos a que campo hace referencia poniendo la id del campo-->
+            <!--La etiqueta input permite crear un campo de un tipo especifico en este caso de tipo text-->
+            <!--La propiedad required permite hacer que un campo sea obligatorio-->
+            <!--La propiedad placeholder me permite dar una sugerencia al usuario-->
+            <!--La propiedad name nos da un identificador al campo-->
+            <label for="nombre">Nombre de usuario:</label>
+            <input type="text" placeholder="Ej: Sebastian31" name="nombre" id="nombre" required><br>
+            <!--El tipo de campo email nos permite comprobar que la estrucura sea igual a la del email-->
+            <label for="email">Email:</label>
+            <input type="email" name="email" placeholder="Ej: sebastian13ml@gmail.com" id="email" required><br>
+            <!--Este campo es de tipo numero y solo permite ingresar numeros-->
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" name="edad" placeholder="Ej: 18"><br>
+            <!--Este campo nos permite elegir entre uno o otro-->
+            <h3>Genero:</h3>
+            <input type="radio" id="masculino" value="M" name="genero">
+            <label for="masculino">Masculino</label>
+            <input type="radio" id="femenino" value="F" name="genero">
+            <label for="femenino">Femenino</label><br>
+            <!--Este campo nos permite crear un campo de seleccion dando diferentes opciones con la etiqueta option-->
+            <label for="recomendado">Recomendado por:</label>
+            <select name="recomendado" id="recomendado">
+                <option value="google">Google</option>
+                <option value="amigo">Amigo</option>
+                <option value="redes sociales">Redes Sociales</option>
+            </select><br>
+            <!--El campo textarea nos permite crear un campo de tipo submit pero la diferencia es que es mas grande y nos ayuda para digitar información de mayor tamaño como descriciones, comentarios , etc-->
+            <label for="comentarios">Comentarios:</label><br>
+            <textarea name="" id="comentarios" cols="30" rows="10"></textarea><br>
+            <!--Este campo le permite al usuario activar una opción o no-->
+            <input type="checkbox" id="terminos" name="terminos" value="yes" required>
+            <label for="terminos">Acepto los términos y condiciones</label><br>
+            <!--Este campo nos permite enviar el formulario y es importante siempre colocarlo-->
+            <input type="submit">
+        </fieldset>
+    </form>
+</body>
+</html>

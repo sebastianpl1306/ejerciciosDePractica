@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>orientado a objetos</title>
+</head>
+<body>
+    <script>
+    class ElementoInstruccional{
+        constructor(id,tipo,version){
+            this.id = id;
+            this.tipo = tipo;
+            this.version = version;
+        }
+        
+        nombre(){
+            return `COMP18S_${this.id}_${this.tipo}_${this.version}.midoc`;   
+        }
+    }
+
+    var actividad = new ElementoInstruccional(1,"interactiva","V1");
+    var actividad2 = new ElementoInstruccional(2,"ejercicio","V2");
+    var actividad3 = new ElementoInstruccional(3,"laboratorio","V1");
+
+    console.log(actividad.nombre());
+    console.log(actividad2.nombre());
+    console.log(actividad3.nombre());
+
+    class Evento{
+        constructor(id,nombre,cantidadAsistentes,precioPorAsistente){
+            this.id = id;
+            this.nombre = nombre;
+            this.cantidadAsistentes = cantidadAsistentes;
+            this.precioPorAsistente = precioPorAsistente;
+        }
+
+        enlace(){
+            return `/evento/${this.id}`;
+        }
+
+        dineroTotalRecaudado(){
+            return this.cantidadAsistentes * this.precioPorAsistente;
+        }
+    }
+
+    var evento1 = new Evento(1,"e1", 12, 5);
+    console.log(evento1.enlace());
+    console.log(evento1.dineroTotalRecaudado());
+    </script>
+</body>
+</html>
